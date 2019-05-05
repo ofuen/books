@@ -14,6 +14,7 @@ const utils = require('../utils');
 const getDiscriminatorByValue = require('../queryhelpers').getDiscriminatorByValue;
 
 const arrayParentSymbol = require('../helpers/symbols').arrayParentSymbol;
+const arrayPathSymbol = require('../helpers/symbols').arrayPathSymbol;
 
 let MongooseDocumentArray;
 let Subdocument;
@@ -362,7 +363,9 @@ DocumentArray.prototype.cast = function(value, doc, init, prev, options) {
 
     if (value[i] instanceof Subdocument) {
       // Might not have the correct index yet, so ensure it does.
-      value[i].$setIndex(i);
+      if (value[i].__index == null) {
+        value[i].$setIndex(i);
+      }
     } else if (value[i] != null) {
       if (init) {
         if (doc) {
@@ -397,7 +400,7 @@ DocumentArray.prototype.cast = function(value, doc, init, prev, options) {
             _clearListeners(value);
             const valueInErrorMessage = util.inspect(value[i]);
             throw new CastError('embedded', valueInErrorMessage,
-              value._path, error);
+              value[arrayPathSymbol], error);
           }
         }
       }
