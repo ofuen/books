@@ -6,19 +6,19 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "bluebird": "^3.5.5",
+    "bluebird": "^3.7.1",
     "clean-css": "^4.2.1",
-    "constantinople": "^3.1.2",
+    "constantinople": "^4.0.1",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.5",
     "debug": "^4.1.1",
     "express": "^4.17.1",
-    "express-graphql": "^0.8.0",
-    "graphql": "^14.3.1",
+    "express-graphql": "^0.9.0",
+    "graphql": "^14.5.8",
     "graphql-date": "^1.0.3",
-    "http-errors": "^1.7.2",
+    "http-errors": "^1.7.3",
     "jade": "~1.11.0",
-    "mongoose": "^5.6.0",
+    "mongoose": "^5.7.7",
     "morgan": "~1.9.0"
   }
 }
