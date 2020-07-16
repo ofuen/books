@@ -8,7 +8,7 @@
     "eslint-utils": "^1.4.1",
     "graphql": "^14.5.8",
     "graphql-tag": "^2.10.1",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.19",
     "lodash.template": "^4.5.0",
     "minimist": "^1.2.5",
     "mixin-deep": "^1.3.2",
