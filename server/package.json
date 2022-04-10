@@ -18,7 +18,7 @@
     "graphql-date": "^1.0.3",
     "http-errors": "^1.7.3",
     "jade": "~1.11.0",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "mongoose": "^5.9.12",
     "morgan": "~1.9.0"
   }
